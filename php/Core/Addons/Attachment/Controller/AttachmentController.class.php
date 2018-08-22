@@ -16,15 +16,13 @@ class AttachmentController extends AddonsController{
 	public function download(){
 		/* 获取附件ID */
 		$id = I('get.id');
-		if(empty($id) || !is_numeric($id)){
-			$this->error('附件ID无效！');
-		}
+		empty($id) || !is_numeric($id) and  $this->error('附件ID无效！');
 
-		/* 下载附件 */
+
+
 		$Attachment = D('Addons://Attachment/Attachment');
-		if(false === $Attachment->download($id)){
-			$this->error($Attachment->getError());
-		}
+		false === $Attachment->download($id) and  $this->error($Attachment->getError());
+
 
 	}
 

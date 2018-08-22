@@ -90,16 +90,14 @@ class AttachmentModel extends Model{
 					$File = D('File');
 					$root = C('ATTACHMENT_UPLOAD.rootPath');
 					$call = array($this, 'setDownload');
-					if(false === $File->download($root, $info['source'], $call, $id)){
-						$this->error = $File->getError();
-					}
+					if(false === $File->download($root, $info['source'], $call, $id)) $this->error = $File->getError();
+
 					break;
 				default:
 					$this->error = '无效附件类型！';
 			}
-		} else {
-			$this->error = '附件已删除或被禁用！';
-		}
+		} else $this->error = '附件已删除或被禁用！';
+
 		return false;
 	}
 

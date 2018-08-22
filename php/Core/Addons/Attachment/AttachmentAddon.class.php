@@ -55,19 +55,11 @@ class AttachmentAddon extends Addon{
 
 	/* 文档末尾显示附件列表 */
 	public function documentDetailAfter($info = array()){
-		if(empty($info) || empty($info['id'])){ //数据不正确
-			return ;
-		}
-
-		/* 获取当前文档附件 */
+		if(empty($info) || empty($info['id'])) return ;
 		$Attachment = D('Addons://Attachment/Attachment');
 		$map = array('record_id' => $info['id'], 'status' => 1);
 		$list = $Attachment->field(true)->where($map)->select();
-		if(!$list){ //不存在附件
-			return ;
-		}
-
-		/* 模板赋值并渲染模板 */
+		if(!$list) return ;
 		$this->assign('list', $list);
 		$this->display(T('Addons://Attachment@Article/detail'));
 	}
@@ -80,8 +72,8 @@ class AttachmentAddon extends Addon{
 	public function documentSaveComplete($param){
 		if (MODULE_NAME == 'Home') {
 			list($data, $category) = $param;
-			/* 附件默认配置项 */
-			$default  = C('ATTACHMENT_DEFAULT');
+
+			$default  = C('ATTACHMENT_DEFAULT');                                                                            	/* 附件默认配置项 */
 
 			/* 合并当前配置 */
 			$config = $category['extend']['attachment'];
@@ -89,9 +81,8 @@ class AttachmentAddon extends Addon{
 			$attach = I('post.attachment');
 
 			/* 该分类不允许上传附件 */
-			if(!$config['is_upload'] || !in_array($attach['type'], str2arr($config['allow_type']))){
-				return ;
-			}
+			if(!$config['is_upload'] || !in_array($attach['type'], str2arr($config['allow_type']))) return ;
+
 
 			switch ($attach['type']) {
 				case 1: //外链
@@ -102,9 +93,8 @@ class AttachmentAddon extends Addon{
 					if(!empty($info)){
 						$Attachment = D('Addons://Attachment/Attachment');
 						$Attachment->saveFile($info['name'], $info, $data['id']);
-					} else {
-						return; //TODO:非法附件上传，可记录日志
-					}
+					} else return;
+
 					break;
 			}
 		}
