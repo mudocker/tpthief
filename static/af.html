@@ -1,0 +1,809 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<title>马海祥博客-专注于分享seo思维和sem网络营销的医疗SEO博客</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<meta name="description" content="SEO思维博客就是要帮助初学seo的创业者,如何在网站制作的同时把seo技术、网页优化、网站管理、团队合作以及多方面的因素融合到sem网络营销中,把周围接触到的新鲜事物敏锐的跟seo联系起来,全方位展示给访客最新的、最有价值的信息,进而从一个全新的层次上提升seo优化的水平,达到网络信息最佳化的展示效果." />
+<meta name="keywords" content="马海祥博客,seo思维,seo博客,新型seo,sem营销,网络营销,医疗seo,医院seo" />
+
+<LINK rel=stylesheet type=text/css href="http://www.mahaixiang.cn/templets/MA/style/mhx.css">
+
+<SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/style/jquery.min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/style/comm.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/style/jquery.lazyload.js"></SCRIPT>
+<SCRIPT type=text/javascript>
+//焦点图
+var _index = 0;
+var _t;
+$(function(){
+    $("img").lazyload();
+	$("#slide > li").hover(function(){
+			if(!($(this).hasClass("on"))){
+				move($(this));
+			}
+	});
+	_t = setInterval("autoMove()", 4000);
+    $("#slide > li").hover(function(){clearInterval(_t)}, function(){_t = setInterval("autoMove()", 4000);});
+
+	//抽屉
+	$(".slidebox > li").hover(function(){
+			if($(this).hasClass("show")){return;}
+			else{
+				$(this).siblings("li").removeClass("show");
+				$(this).addClass("show");
+			}
+	});
+
+	
+	$("#syrsopt > .arrR").click(function(){
+			spmove(1)
+	});
+	$("#syrsopt > .arrL").click(function(){
+			spmove(-1)
+	});
+
+	$(".tlist > li,#tchd > .hdbox > .bd > ul > li > .cf").hover(
+		function(){
+			$(this).css("background-color","#fdf9f9");
+		},
+		function(){
+			$(this).css("background-color","");
+		}
+	)
+});
+function move(obj){
+	$("#slide > li").stop();
+	obj.siblings().animate({width:"79px"},'slow');
+	$("#slide > .on").stop().animate({width:"79px"},'normal',function(){$(this).removeClass("on")});
+	$(".hshadow").stop().css("height","330px");
+	obj.find(".hshadow").css("height","0px").animate({height:"50px"},'normal');
+	obj.animate({width:"600px"},'normal',function(){$(this).addClass("on");});
+	_index = obj.index();
+}
+
+function autoMove(){
+	_index = _index >=(6 - 1) ? 0 : ++_index;
+	move($("#slide > li").eq(_index));
+}
+</SCRIPT>
+
+</HEAD>
+<BODY>
+
+<DIV class=toptb>
+<DIV class=wp>
+<DIV class=z>
+新型SEO思维就是从一个全新的层次上提升seo优化的水平，达到网络信息最佳化的展示效果！
+</DIV>
+<DIV class=y>
+<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.mahaixiang.cn');">设为首页</a>
+<a href="javascript:window.external.AddFavorite('http://www.mahaixiang.cn','马海祥博客-专注于分享seo思维和sem网络营销的医疗SEO博客')">收藏本站</a>
+<A href="http://www.mahaixiang.cn/tags.php" target=_blank>TAG标签</A> 
+<A href="http://www.mahaixiang.cn/sitemap.html" target=_blank>网站地图</A> 
+<A href="http://www.mahaixiang.cn/rssmap.html" target=_blank>RSS地图</A> 
+</DIV>
+<div style="clear: both"></div>
+</DIV></DIV>
+
+<DIV class=header>
+<DIV class=headerInner>
+<DIV class=logo><A href="http://www.mahaixiang.cn"  title="马海祥SEO博客" target=_blank>马海祥博客</A></DIV>
+<DIV id=indexSearch class="box search">
+      <form  name="formsearch" action="http://www.mahaixiang.cn/plus/search.php" target=_blank>
+                  <input type="hidden" name="kwtype" value="0" />
+           <input name="q" type="text" class="SEARCH_INPUT" id="search-keyword" value="在这里搜索..." onFocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+		   		
+		   
+         <button type="submit" class="search-submit">搜索</button>
+		    
+        </form> 
+</DIV>
+		
+    	<ul class=nav>
+      	<li><a href='http://www.mahaixiang.cn/' target=_blank><span>首页</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/jrht/'  target=_blank><span>今日话题</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/SEO/'  rel='dropmenu40' target=_blank><span>SEO优化</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/wzzz/'  rel='dropmenu3' target=_blank><span>网站制作</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/WLYX/'  rel='dropmenu41' target=_blank><span>网络营销</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/wzyy/'  rel='dropmenu43' target=_blank><span>网站运营</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/dzsw/'  target=_blank><span>电子商务</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/chuangye/'  target=_blank><span>创业故事</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/ZCRS/'  rel='dropmenu39' target=_blank><span>职场人生</span></a></li>
+      	
+      	<li><a href='http://www.mahaixiang.cn/zyxz/'  rel='dropmenu7' target=_blank><span>资源下载</span></a></li>
+      	
+    	</ul>
+ 
+</DIV>
+</DIV>
+
+<DIV class=main>
+
+<DIV class="layout mt10">
+<DIV class=focus_wrap>
+<UL id=slide class=cf>
+
+<LI class="on first">
+<a title="百度推出最新外链查询工具beta版：首次公开给出外链数据" href="http://www.mahaixiang.cn/seoxw/136.html" target=_blank><img src="http://www.mahaixiang.cn/uploads/allimg/2012/1-1P203161220594.jpg" alt="百度推出最新外链查询工具beta版：首次公开给出外链数据"  width=600 height=330></a>
+<SPAN class=hshadow></SPAN>
+  <EM class=hstxt>
+  <SPAN  class=fnum>01</SPAN><SPAN class=farr>&gt;</SPAN><H2><a title="百度推出最新外链查询工具beta版：首次公开给出外链数据" href="http://www.mahaixiang.cn/seoxw/136.html" target=_blank>百度推出最新外链查询工具beta版：首次公开给出外链数据</a></H2>
+  </EM>
+  </LI>
+<LI>
+<a title="内容营销的误区及应对策略" href="http://www.mahaixiang.cn/nryx/883.html" target=_blank><img src="http://www.mahaixiang.cn/uploads/allimg/1410/1-1403241F610E3.jpg" alt="内容营销的误区及应对策略"  width=600 height=330></a>
+<SPAN class=hshadow></SPAN>
+  <EM class=hstxt>
+  <SPAN  class=fnum>02</SPAN><SPAN class=farr>&gt;</SPAN><H2><a title="内容营销的误区及应对策略" href="http://www.mahaixiang.cn/nryx/883.html" target=_blank>内容营销的误区及应对策略</a></H2>
+  </EM>
+  </LI>
+<LI>
+<a title="关于大型网站架构的负载均衡技术详解" href="http://www.mahaixiang.cn/internet/1601.html" target=_blank><img src="http://www.mahaixiang.cn/uploads/allimg/1608/1-160P515314S94.jpg" alt="关于大型网站架构的负载均衡技术详解"  width=600 height=330></a>
+<SPAN class=hshadow></SPAN>
+  <EM class=hstxt>
+  <SPAN  class=fnum>03</SPAN><SPAN class=farr>&gt;</SPAN><H2><a title="关于大型网站架构的负载均衡技术详解" href="http://www.mahaixiang.cn/internet/1601.html" target=_blank>关于大型网站架构的负载均衡技术详解</a></H2>
+  </EM>
+  </LI>
+<LI>
+<a title="产品经理该如何进行用户行为分析并提高用户粘性？" href="http://www.mahaixiang.cn/cpyy/1754.html" target=_blank><img src="http://www.mahaixiang.cn/uploads/allimg/1701/1-1P109225031J6.jpg" alt="产品经理该如何进行用户行为分析并提高用户粘性？"  width=600 height=330></a>
+<SPAN class=hshadow></SPAN>
+  <EM class=hstxt>
+  <SPAN  class=fnum>04</SPAN><SPAN class=farr>&gt;</SPAN><H2><a title="产品经理该如何进行用户行为分析并提高用户粘性？" href="http://www.mahaixiang.cn/cpyy/1754.html" target=_blank>产品经理该如何进行用户行为分析并提高用户粘性？</a></H2>
+  </EM>
+  </LI>
+<LI>
+<a title="网站被百度降权后该怎么办？" href="http://www.mahaixiang.cn/seowd/1219.html" target=_blank><img src="http://www.mahaixiang.cn/uploads/allimg/1507/1-150FH02P3956.jpg" alt="网站被百度降权后该怎么办？"  width=600 height=330></a>
+<SPAN class=hshadow></SPAN>
+  <EM class=hstxt>
+  <SPAN  class=fnum>05</SPAN><SPAN class=farr>&gt;</SPAN><H2><a title="网站被百度降权后该怎么办？" href="http://www.mahaixiang.cn/seowd/1219.html" target=_blank>网站被百度降权后该怎么办？</a></H2>
+  </EM>
+  </LI>
+<LI>
+<a title="如何分析淘宝数据来优化淘宝店铺" href="http://www.mahaixiang.cn/taobaoSEO/792.html" target=_blank><img src="http://www.mahaixiang.cn/uploads/allimg/1409/1-140ZGA632C9.jpg" alt="如何分析淘宝数据来优化淘宝店铺"  width=600 height=330></a>
+<SPAN class=hshadow></SPAN>
+  <EM class=hstxt>
+  <SPAN  class=fnum>06</SPAN><SPAN class=farr>&gt;</SPAN><H2><a title="如何分析淘宝数据来优化淘宝店铺" href="http://www.mahaixiang.cn/taobaoSEO/792.html" target=_blank>如何分析淘宝数据来优化淘宝店铺</a></H2>
+  </EM>
+  </LI>
+
+</UL>
+<!--<DIV id=div_cover></DIV>-->
+</DIV>
+</DIV>
+
+
+<DIV class=content>
+
+<DIV class="left box">
+ 
+<DL class=topLine>
+  <DT>
+  <H1><a href="http://www.mahaixiang.cn/nryx/2255.html" target=_blank>靠内容营销的知识付费是否会有未来？</a></H1> 
+      <a href='http://www.mahaixiang.cn/nryx/2255.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1806/1-1P623191Q9109.jpg' border='0' width='300' height='180' alt='靠内容营销的知识付费是否会有未来？'></a>
+  </DT>
+  
+  <DD>
+  <SPAN>
+  <EM class=view>22</EM>
+   </SPAN>
+   <a href='http://www.mahaixiang.cn/nryx/'>内容营销</a> |  2018-06-23 
+  <P>知识付费的出现，原本寄托了人们对优质内容的期望。尤其是身处职场中的人们，因为害怕对世界的变化应接不暇，对技术的更迭一无所知，而不得不选择不断学习知识，焦虑也由此产生。但如果把知识付费比作一种抗焦虑药，显然，这种药是失效的。大部分知识付费平台的公关诉求……
+  <a href="http://www.mahaixiang.cn/nryx/2255.html" target=_blank>访问全文 >></a>
+  </P>
+  </DD>
+  </DL>
+
+  
+  
+  
+<UL class=subTopLine>  
+<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+    <td width='25%'>
+<LI>
+<a href="http://www.mahaixiang.cn/jrht/105.html" title="未来10年内API是否会让网站逐渐消亡？" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/120921/1P5391911-0-lp.gif' alt='未来10年内API是否会让网站逐渐消亡？' width=150 height=90 /></a>
+<H3><a href='http://www.mahaixiang.cn/jrht/105.html'>未来10年内API是否会让网站逐渐消亡？</a></H3>
+<SPAN><a href='http://www.mahaixiang.cn/jrht/'>今日话题</a>   2012-09-21</SPAN> 
+</LI>
+    </td>
+    <td width='25%'>
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/812.html" title="Google(谷歌)使用PageRank算法给搜索结果" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/1409/1-14091G41P5Q6.jpg' alt='Google(谷歌)使用PageRank算法给搜索结果' width=150 height=90 /></a>
+<H3><a href='http://www.mahaixiang.cn/seoyjy/812.html'>Google(谷歌)使用PageRank算法给搜索结果</a></H3>
+<SPAN><a href='http://www.mahaixiang.cn/seoyjy/'>SEO研究院</a>   2014-09-17</SPAN> 
+</LI>
+    </td>
+    <td width='25%'>
+<LI>
+<a href="http://www.mahaixiang.cn/cpyy/1324.html" title="产品经理最容易误入的一些误区" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/1510/1-151019230925E3.jpg' alt='产品经理最容易误入的一些误区' width=150 height=90 /></a>
+<H3><a href='http://www.mahaixiang.cn/cpyy/1324.html'>产品经理最容易误入的一些误区</a></H3>
+<SPAN><a href='http://www.mahaixiang.cn/cpyy/'>产品运营</a>   2015-10-19</SPAN> 
+</LI>
+    </td>
+    <td width='25%'>
+<LI>
+<a href="http://www.mahaixiang.cn/seowd/1423.html" title="新手学习SEO该如何快速入门" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/1601/1-1601251U31YJ.jpg' alt='新手学习SEO该如何快速入门' width=150 height=90 /></a>
+<H3><a href='http://www.mahaixiang.cn/seowd/1423.html'>新手学习SEO该如何快速入门</a></H3>
+<SPAN><a href='http://www.mahaixiang.cn/seowd/'>SEO问答</a>   2016-01-25</SPAN> 
+</LI>
+    </td>
+    </tr>
+    </table>
+
+</UL>
+<DIV class=gg01>
+<SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/gg/gg-1.js"></SCRIPT>
+</DIV>
+<UL class=news>
+
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/seowd/2251.html" target=_blank>谷歌不断升级“聚合器”搜索策略会有什么影响？</a></H2>
+  <SPAN>
+  <EM class=view>49</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/seowd/'>SEO问答</a> |  2018年06月19日 | 谷歌,聚合器,搜索策略
+
+  <a href='http://www.mahaixiang.cn/seowd/2251.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1806/1-1P619150H1317.jpg' border='0' width='660' height='220' alt='谷歌不断升级“聚合器”搜索策略会有什么影响？'></a>
+  <P>前段时间，Google对其搜索策略进行了新的升级改变，用答案或者选项取代了原来的推荐网站链接，直接将结果在搜索中显示。依赖SEO的聚合类的网站需要改变策略了，否则今后从谷歌获取流量来源将难上加难了!当你在谷歌输入一个问题，然后查询后，以前谷歌会提供一连串……
+  <a href="http://www.mahaixiang.cn/seowd/2251.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/znseo/2249.html" target=_blank>落地页时间因子将直接影响网站收录、展示和排序结果</a></H2>
+  <SPAN>
+  <EM class=view>77</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/znseo/'>站内SEO</a> |  2018年06月17日 | 落地页,时间因子,网站收录
+
+  <a href='http://www.mahaixiang.cn/znseo/2249.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1806/1-1P61G6192GT.jpg' border='0' width='660' height='220' alt='落地页时间因子将直接影响网站收录、展示和排序结果'></a>
+  <P>今天，我要和大家详细聊一下“落地页时间因子”，别小看它只是一段小小的代码，但是它是百度搜索判断网站收录、展示、排序结果的重要参考依据，对站长或SEO来说，非常重要！百度搜索综合用户对落地页中关于时间因子的实际感受，发现目前PC端及移动端大量网站落地页存在……
+  <a href="http://www.mahaixiang.cn/znseo/2249.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/seoxw/2232.html" target=_blank>百度搜索上线“极光算法”：倡导重视落地页时间规范</a></H2>
+  <SPAN>
+  <EM class=view>44</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/seoxw/'>SEO新闻</a> |  2018年05月31日 | 百度搜索,极光算法,落地页
+
+  <a href='http://www.mahaixiang.cn/seoxw/2232.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P619164Q3Q4.jpg' border='0' width='660' height='220' alt='百度搜索上线“极光算法”：倡导重视落地页时间规范'></a>
+  <P>2018年5月底，百度搜索将上线极光算法，旨在倡导资源方重视网站落地页时间规范。落地页时间因子是百度搜索判断网站收录、展示、排序结果的重要参考依据。为了让用户获得更满意的搜索浏览体验，我们将给予符合落地页时间因子要求且时效性较高的网页更多的收录、展现机会……
+  <a href="http://www.mahaixiang.cn/seoxw/2232.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/seoxw/2224.html" target=_blank>惊雷算法2.0：永久封禁恶意制造作弊超链和恶意刷点击作弊行为</a></H2>
+  <SPAN>
+  <EM class=view>333</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/seoxw/'>SEO新闻</a> |  2018年05月23日 | 推广,惊雷算法,刷点击,作弊行为
+
+  <a href='http://www.mahaixiang.cn/seoxw/2224.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P52GA950U0.jpg' border='0' width='660' height='220' alt='惊雷算法2.0：永久封禁恶意制造作弊超链和恶意刷点击作弊行为'></a>
+  <P>为保证搜索用户体验，促进搜索生态良性发展，百度搜索将于5月底推出惊雷算法2.0。相对于惊雷算法1.0，此次升级主要针对“恶意制造作弊超链”和“恶意刷点击”的作弊行为进行了算法升级。惊雷算法2.0将对作弊的网站限制搜索展现、清洗作弊链接、清洗点击，并会将站……
+  <a href="http://www.mahaixiang.cn/seoxw/2224.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/internet/2223.html" target=_blank>百亿级规模的日志系统架构设计及优化</a></H2>
+  <SPAN>
+  <EM class=view>114</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/internet/'>互联网技术</a> |  2018年05月22日 | 日志系统,架构设计,系统架构
+
+  <a href='http://www.mahaixiang.cn/internet/2223.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P5221A64D43.jpg' border='0' width='660' height='220' alt='百亿级规模的日志系统架构设计及优化'></a>
+  <P>日志数据是最常见的一种海量数据，以拥有大量用户群体的电商平台为例，双11大促活动期间，它们可能每小时的日志数量达到百亿规模，海量的日志数据暴增，随之给技术团队带来严峻的挑战。本文将从海量日志系统在优化、部署、监控方向如何更适应业务的需求入手，重点从多种日……
+  <a href="http://www.mahaixiang.cn/internet/2223.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/znseo/2221.html" target=_blank>百度识别原创文章的方法策略是什么</a></H2>
+  <SPAN>
+  <EM class=view>273</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/znseo/'>站内SEO</a> |  2018年05月20日 | 百度,原创文章,原创方法,原创策略
+
+  <a href='http://www.mahaixiang.cn/znseo/2221.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P520150439D4.jpg' border='0' width='660' height='220' alt='百度识别原创文章的方法策略是什么'></a>
+  <P>虽说互联网大多都是泛滥采集，但依然有部分人坚持提供原创价值的内容，而搜索引擎对待这部分作者也是有特殊照顾的，若是辛辛苦苦写出来的原创，才刚发表就被别人采集去了，很容易打击作者的创作积极性的，在目前竞争激烈的互联网之中，只有让广大站长提供价值原创内容，……
+  <a href="http://www.mahaixiang.cn/znseo/2221.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/seoxw/2220.html" target=_blank>烽火算法2.0：百度将严惩“窃取用户数据”和“恶意劫持”行为</a></H2>
+  <SPAN>
+  <EM class=view>93</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/seoxw/'>SEO新闻</a> |  2018年05月19日 | seo,烽火算法,用户数据,恶意劫持
+
+  <a href='http://www.mahaixiang.cn/seoxw/2220.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P522122605P2.jpg' border='0' width='660' height='220' alt='烽火算法2.0：百度将严惩“窃取用户数据”和“恶意劫持”行为'></a>
+  <P>近期，百度搜索即将上线烽火算法2.0，将严惩“窃取用户数据”和“恶意劫持”的行为。烽火算法2.0 主要针对以下两类问题，一经发现将会永久封禁：1、未经用户允许恶意窃取用户手机号码等隐私数据的行为。2、恶意劫持百度流量的行为，主要表现在：（1）、搜索用户通……
+  <a href="http://www.mahaixiang.cn/seoxw/2220.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/nryx/2217.html" target=_blank>国外媒体是如何通过内容价值来留存读者</a></H2>
+  <SPAN>
+  <EM class=view>100</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/nryx/'>内容营销</a> |  2018年05月16日 | 国外媒体,内容价值
+
+  <a href='http://www.mahaixiang.cn/nryx/2217.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P516121H3Y7.jpg' border='0' width='660' height='220' alt='国外媒体是如何通过内容价值来留存读者'></a>
+  <P>当下，各大媒体都在推行付费订阅和会员制。这些举措，或许已经成为不那么新鲜的尝试。从0到1，已经实现基础用户规模累积的媒体陡然发现，面对这些宝贵的用户资源，如何长久地留住他们，使会员制、付费制真正实现可持续发展，成为最为严峻的考验。用户刺激渐入倦态，流失率……
+  <a href="http://www.mahaixiang.cn/nryx/2217.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/yyseo/2214.html" target=_blank>医疗品牌推广过程中遇到负面 新闻该怎么办？</a></H2>
+  <SPAN>
+  <EM class=view>191</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/yyseo/'>医院SEO</a> |  2018年05月13日 | 医疗品牌,品牌推广,********,医疗推广,********,******,******
+
+  <a href='http://www.mahaixiang.cn/yyseo/2214.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P513223040C3.jpg' border='0' width='660' height='220' alt='医疗品牌推广过程中遇到负面 新闻该怎么办？'></a>
+  <P>医院网站的品牌推广是非常必要的，现在是互联网时代，人们也习惯通过网络了解一些自己想要知道的信息。毕竟人们看病更关不和喜欢一些在名的医院，如果你的医院技术不错，但是在互联网上却的不到具有可信度的信息，那么人们很可能会因为无法消除心中的不信认感而忽略你的……
+  <a href="http://www.mahaixiang.cn/yyseo/2214.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/semyx/2209.html" target=_blank>抖音营销该怎么做？</a></H2>
+  <SPAN>
+  <EM class=view>1576</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/semyx/'>营销策划</a> |  2018年05月08日 | 抖音营销,抖音
+
+  <a href='http://www.mahaixiang.cn/semyx/2209.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P50QUR9396.jpg' border='0' width='660' height='220' alt='抖音营销该怎么做？'></a>
+  <P>刷了2个多月的抖音和快手，也研究过不少相关数据报告，写之前我也将近期各家的抖音营销观刷了个遍。抖音营销俨然已成为营销界的一大热门话题，“双微一抖”营销模式已得到多数营销人支持。在“品牌该不该做抖音营销”的这个问题上，我没有标新立异的观点，我的建议就是……
+  <a href="http://www.mahaixiang.cn/semyx/2209.html" target=_blank>访问全文 >></a></P>
+  </LI>
+<LI>
+  <H2><a href="http://www.mahaixiang.cn/nryx/2205.html" target=_blank>内容载体升级对于内容本身升级会产生什么影响？</a></H2>
+  <SPAN>
+  <EM class=view>86</EM> 
+  </SPAN>
+  
+   <a href='http://www.mahaixiang.cn/nryx/'>内容营销</a> |  2018年05月04日 | 内容载体,内容升级
+
+  <a href='http://www.mahaixiang.cn/nryx/2205.html'><img src='http://www.mahaixiang.cn/uploads/allimg/1805/1-1P5041JSGS.jpg' border='0' width='660' height='220' alt='内容载体升级对于内容本身升级会产生什么影响？'></a>
+  <P>2018年内容产业的第一场战争刚刚由快手和抖音点燃，玩家肉搏，行业看戏不亦乐乎。监管也适时入局，不仅重新捋了下游戏规则，也相对抬高了门槛。表面上看，监管的入局和平台发展的磨合，相互制肘又一同发展演变。究其背后，还是用户和内容的之间关系演变导致的：通常情况……
+  <a href="http://www.mahaixiang.cn/nryx/2205.html" target=_blank>访问全文 >></a></P>
+  </LI>
+
+ 
+  </UL>
+  </DIV>
+  
+
+
+<DIV class=right>
+  
+<DIV class="toolbox box">
+<H4><STRONG>分类目录</STRONG></H4>
+<DIV>
+<A title="医院SEO" href="http://www.mahaixiang.cn/yyseo/" target=_blank>医院SEO</A>
+<A title="企业SEO" href="http://www.mahaixiang.cn/qyseo/" target=_blank>企业SEO</A>
+<A title="站内SEO" href="http://www.mahaixiang.cn/znseo/" target=_blank>站内SEO</A>
+<A title="站外SEO" href="http://www.mahaixiang.cn/zwseo/" target=_blank>站外SEO</A>
+<A title="淘宝SEO" href="http://www.mahaixiang.cn/taobaoSEO/" target=_blank>淘宝SEO</A>
+<A title="数据分析" href="http://www.mahaixiang.cn/sjfx/" target=_blank>数据分析</A>
+<A title="竞价技巧" href="http://www.mahaixiang.cn/jjjq/" target=_blank>竞价技巧</A>
+<A title="写作技巧" href="http://www.mahaixiang.cn/xzjq/" target=_blank>写作技巧</A>
+<A title="微信微博" href="http://www.mahaixiang.cn/bkwb/" target=_blank>微信微博</A>
+<A title="经验分享" href="http://www.mahaixiang.cn/jyfx/" target=_blank>经验分享</A>
+<A title="网站策划" href="http://www.mahaixiang.cn/wzch/" target=_blank>网站策划</A>
+<A title="网站设计" href="http://www.mahaixiang.cn/wzsj/" target=_blank>网站设计</A>
+<A title="网页制作" href="http://www.mahaixiang.cn/wyzz/" target=_blank>网页制作</A>
+<A title="编程语言" href="http://www.mahaixiang.cn/bcyy/" target=_blank>编程语言</A>
+<A title="Photoshop教程" href="http://www.mahaixiang.cn/Photoshop/" target=_blank>Photoshop教程</A>
+<A title="CMS管理系统" href="http://www.mahaixiang.cn/CMS/" target=_blank>CMS管理系统</A>
+</DIV>
+</DIV>
+
+<DIV class="picShow box">
+<H4><STRONG>热点推荐</STRONG></H4>
+<UL>
+<LI class=current>
+<a href="http://www.mahaixiang.cn/zcfz/305.html" title="家族企业老总对营销总监辞职信的批复及网" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/1310/1-140602152P5112.jpg' alt='家族企业老总对营销总监辞职信的批复及网' width=64 height=48 /></a>
+  <SPAN><a href="http://www.mahaixiang.cn/zcfz/305.html" title="家族企业老总对营销总监辞职信的批复及网" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/1310/1-140602152P5112.jpg' alt='家族企业老总对营销总监辞职信的批复及网' width=280 height=210 />
+  <STRONG>家族企业老总对营销总监辞职信的批复及网</STRONG></a></SPAN>
+  </LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoxw/215.html" title="百度石榴算法的上线对站长们有什么影响" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/130518/1-140RG3503c05.jpg' alt='百度石榴算法的上线对站长们有什么影响' width=64 height=48 /></a>
+  <SPAN><a href="http://www.mahaixiang.cn/seoxw/215.html" title="百度石榴算法的上线对站长们有什么影响" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/130518/1-140RG3503c05.jpg' alt='百度石榴算法的上线对站长们有什么影响' width=280 height=210 />
+  <STRONG>百度石榴算法的上线对站长们有什么影响</STRONG></a></SPAN>
+  </LI>
+<LI>
+<a href="http://www.mahaixiang.cn/html/194.html" title="预测HTML5的10大发展趋势" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-1403131AS42a.jpg' alt='预测HTML5的10大发展趋势' width=64 height=48 /></a>
+  <SPAN><a href="http://www.mahaixiang.cn/html/194.html" title="预测HTML5的10大发展趋势" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-1403131AS42a.jpg' alt='预测HTML5的10大发展趋势' width=280 height=210 />
+  <STRONG>预测HTML5的10大发展趋势</STRONG></a></SPAN>
+  </LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoxw/184.html" title="百度绿萝算法正式上线了" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-14101914120H23.jpg' alt='百度绿萝算法正式上线了' width=64 height=48 /></a>
+  <SPAN><a href="http://www.mahaixiang.cn/seoxw/184.html" title="百度绿萝算法正式上线了" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-14101914120H23.jpg' alt='百度绿萝算法正式上线了' width=280 height=210 />
+  <STRONG>百度绿萝算法正式上线了</STRONG></a></SPAN>
+  </LI>
+ 
+</UL>
+</DIV>
+
+  
+<DIV class="activities box">
+<H4><STRONG><A href="http://www.mahaixiang.cn/SEO/" target=“_blank”>SEO优化</A></STRONG> <A href="http://www.mahaixiang.cn/SEO/" target=_blank>更多 >></A></H4>
+  
+  <DL>
+  <DT>
+<a href="http://www.mahaixiang.cn/zwseo/198.html" title="SEO新手做英文网站外链建设的误区及解决方" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-14051Q30103264.jpg' alt='SEO新手做英文网站外链建设的误区及解决方' width=120 height=80 />SEO新手做英文网站外链建设的误区及解决方</a></DT>
+  <DD>
+  <a href="http://www.mahaixiang.cn/zwseo/198.html" target=_blank>立即访问</a>
+  </DD>
+  </DL>
+<DL>
+  <DT>
+<a href="http://www.mahaixiang.cn/seoyjy/173.html" title="判断网站被黑的特征表现及解决方法" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-140Z6152355O3.jpg' alt='判断网站被黑的特征表现及解决方法' width=120 height=80 />判断网站被黑的特征表现及解决方法</a></DT>
+  <DD>
+  <a href="http://www.mahaixiang.cn/seoyjy/173.html" target=_blank>立即访问</a>
+  </DD>
+  </DL>
+<DL>
+  <DT>
+<a href="http://www.mahaixiang.cn/seosw/153.html" title="SEO不能只做网站数据的加法，也要适当的做" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/121218/1-1312141IJ0393.jpg' alt='SEO不能只做网站数据的加法，也要适当的做' width=120 height=80 />SEO不能只做网站数据的加法，也要适当的做</a></DT>
+  <DD>
+  <a href="http://www.mahaixiang.cn/seosw/153.html" target=_blank>立即访问</a>
+  </DD>
+  </DL>
+<DL>
+  <DT>
+<a href="http://www.mahaixiang.cn/znseo/131.html" title="如何解决网站文章内容不收录的问题" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2012/1-140309223535H9.jpg' alt='如何解决网站文章内容不收录的问题' width=120 height=80 />如何解决网站文章内容不收录的问题</a></DT>
+  <DD>
+  <a href="http://www.mahaixiang.cn/znseo/131.html" target=_blank>立即访问</a>
+  </DD>
+  </DL>
+<DL>
+  <DT>
+<a href="http://www.mahaixiang.cn/taobaoSEO/112.html" title="揭秘最新淘宝搜索排名规则" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/121001/1100422T5-0.jpg' alt='揭秘最新淘宝搜索排名规则' width=120 height=80 />揭秘最新淘宝搜索排名规则</a></DT>
+  <DD>
+  <a href="http://www.mahaixiang.cn/taobaoSEO/112.html" target=_blank>立即访问</a>
+  </DD>
+  </DL>
+<DL>
+  <DT>
+<a href="http://www.mahaixiang.cn/seoyjy/108.html" title="SEO实战经验：如何对网站进行全面改版而不" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2012/1-14062922225N04.jpg' alt='SEO实战经验：如何对网站进行全面改版而不' width=120 height=80 />SEO实战经验：如何对网站进行全面改版而不</a></DT>
+  <DD>
+  <a href="http://www.mahaixiang.cn/seoyjy/108.html" target=_blank>立即访问</a>
+  </DD>
+  </DL>
+
+</DIV>
+
+
+<DIV class="xm_bm_top box">
+
+<H4><STRONG><A href="http://www.mahaixiang.cn/jrht/" target=“_blank”>今日话题</A></STRONG><A href="http://www.mahaixiang.cn/jrht/" target=_blank>更多></A> </H4>
+<DIV class=bm_c>
+<UL>
+  <LI><a href="http://www.mahaixiang.cn/jrht/494.html" title="Windows XP操作系统停止服务会影响到" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/1404/1-14040H1463U43.jpg' alt='Windows XP操作系统停止服务会影响到' width=280 height=120 /></a>
+  <a href="http://www.mahaixiang.cn/jrht/494.html" target=_blank>Windows XP操作系统停止服务会影响到</a>
+  <SPAN>一场本该自然更迭的旅程，这一次却显得如此艰难。这就是Windows XP目前的尴尬境界，用户和微软都在进退维谷……</SPAN> 
+  </LI>
+<LI><a href="http://www.mahaixiang.cn/jrht/106.html" title="史上最牛网站12306订票网的十宗罪及" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2012/1-141220152FC26.jpg' alt='史上最牛网站12306订票网的十宗罪及' width=280 height=120 /></a>
+  <a href="http://www.mahaixiang.cn/jrht/106.html" target=_blank>史上最牛网站12306订票网的十宗罪及</a>
+  <SPAN>自从12306诞生之日起，就注定要成为史上最牛电商网站，它界面丑陋，它UI粗糙，它服务器不稳定，它用户体验……</SPAN> 
+  </LI>
+<LI><a href="http://www.mahaixiang.cn/jrht/42.html" title="12306网站到底好不好？" target=_blank><img src='http://www.mahaixiang.cn/uploads/allimg/2012/1-1412231HT41Y.jpg' alt='12306网站到底好不好？' width=280 height=120 /></a>
+  <a href="http://www.mahaixiang.cn/jrht/42.html" target=_blank>12306网站到底好不好？</a>
+  <SPAN>要解决春节购票难，靠12306没戏，12306为什么会在购票高峰期瘫痪？先不考虑架构不够合理，宽带不宽等等，我……</SPAN> 
+  </LI>
+
+ </UL>
+ </DIV></DIV> 
+ 
+<DIV class=gg02>
+<SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/gg/300-250-tp.js"></SCRIPT>
+</DIV> 
+ 
+
+<DIV class="play box">
+<H4><STRONG><A href="http://www.mahaixiang.cn/tdgl/" target=_blank>团队管理</A></STRONG> <A href="http://www.mahaixiang.cn/tdgl/" target=“_blank”>更多>></A> </H4>
+  
+<UL>
+ <LI>
+  <a href="http://www.mahaixiang.cn/tdgl/994.html" title="如何做好团队管理？" target=_blank>
+  <img src='http://www.mahaixiang.cn/uploads/allimg/1412/1-14122522501G59.jpg' alt='如何做好团队管理？' width=80 height=120 />
+  如何做好团队管理？</A> 
+  <P>团队需要发展一种成员之间互相激励和支持的氛围，在这种环境下，团队成员之间会形成一种内在的凝聚力，他们会对其他人……</P>
+  </LI>
+<LI>
+  <a href="http://www.mahaixiang.cn/tdgl/43.html" title="SEO主管要具备哪些能力？" target=_blank>
+  <img src='http://www.mahaixiang.cn/uploads/allimg/120816/1-1402161Q011295.jpg' alt='SEO主管要具备哪些能力？' width=80 height=120 />
+  SEO主管要具备哪些能力？</A> 
+  <P>管理是指通过计划、组织、指挥、协调、控制及创新等手段，结合人力、物力、财力、信息等资源，以期高效的达 到组织目……</P>
+  </LI>
+<LI>
+  <a href="http://www.mahaixiang.cn/tdgl/934.html" title="多年做团队管理的10个感悟" target=_blank>
+  <img src='http://www.mahaixiang.cn/uploads/allimg/1411/1-141125203S3313.jpg' alt='多年做团队管理的10个感悟' width=80 height=120 />
+  多年做团队管理的10个感悟</A> 
+  <P>在团队发展中犯错是不得避免的，我们应该认识到错误是学习所付出的成本，而不是作为惩罚的原因，这是鼓励发展和革新，……</P>
+  </LI>
+<LI>
+  <a href="http://www.mahaixiang.cn/tdgl/302.html" title="设计师和产品经理之间沟通的经验分享" target=_blank>
+  <img src='http://www.mahaixiang.cn/uploads/allimg/1310/1-131022192154D3.jpg' alt='设计师和产品经理之间沟通的经验分享' width=80 height=120 />
+  设计师和产品经理之间沟通的经验分享</A> 
+  <P>经常有新入职的设计师，搞不清设计师和别的职位如产品经理，在工作内容上有什么区别。回答了新人的几次疑问之后，我总……</P>
+  </LI>
+
+</UL>
+</DIV>
+
+
+<DIV class="academy box">
+<H4><STRONG><A href="http://www.mahaixiang.cn/semyx/" target=“_blank”>SEM营销</A></STRONG> <A href="http://www.mahaixiang.cn/semyx/" target=“_blank”>更多>></A> </H4>
+<UL>
+<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+    <td width='50%'>
+<LI><a href="http://www.mahaixiang.cn/semyx/213.html" title="解读17个寓言中的营销法则启示" target=_blank>
+   <img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-13051619541Y08.jpg' alt='解读17个寓言中的营销法则启示' width=130 height=130 /></a>
+   <a href='http://www.mahaixiang.cn/semyx/213.html'>解读17个寓言中的营销法则启示</a>
+  </LI>
+    </td>
+    <td width='50%'>
+<LI><a href="http://www.mahaixiang.cn/semyx/137.html" title="新闻营销的8大策略" target=_blank>
+   <img src='http://www.mahaixiang.cn/uploads/allimg/2012/1-1406121150235N.jpg' alt='新闻营销的8大策略' width=130 height=130 /></a>
+   <a href='http://www.mahaixiang.cn/semyx/137.html'>新闻营销的8大策略</a>
+  </LI>
+    </td>
+    </tr>
+<tr>
+    <td width='50%'>
+<LI><a href="http://www.mahaixiang.cn/semyx/28.html" title="软文营销常见的类型有哪些？" target=_blank>
+   <img src='http://www.mahaixiang.cn/uploads/allimg/2012/1-140421162221a4.jpg' alt='软文营销常见的类型有哪些？' width=130 height=130 /></a>
+   <a href='http://www.mahaixiang.cn/semyx/28.html'>软文营销常见的类型有哪些？</a>
+  </LI>
+    </td>
+    <td width='50%'>
+<LI><a href="http://www.mahaixiang.cn/semyx/20.html" title="SEM(搜索引擎营销)是什么？" target=_blank>
+   <img src='http://www.mahaixiang.cn/uploads/allimg/120810/SEM.jpg' alt='SEM(搜索引擎营销)是什么？' width=130 height=130 /></a>
+   <a href='http://www.mahaixiang.cn/semyx/20.html'>SEM(搜索引擎营销)是什么？</a>
+  </LI>
+    </td>
+    </tr>
+    </table>
+
+</UL>
+</DIV>
+
+
+<DIV class="recommend box">
+<H4><STRONG><A href="http://www.mahaixiang.cn/wzzz/" target=“_blank”>网站制作</A></STRONG> <A href="http://www.mahaixiang.cn/wzzz/" target=_blank>更多 >></A></H4>
+<UL>
+
+<LI><a href="http://www.mahaixiang.cn/wyzz/279.html" title="如何制作一个响应式网页？" target=_blank>
+  <img src='http://www.mahaixiang.cn/uploads/allimg/1309/142914K31-0.png' alt='如何制作一个响应式网页？' width=280 height=180 />
+  <STRONG>如何制作一个响应式网页？</STRONG> </a>
+  </LI>
+<LI><a href="http://www.mahaixiang.cn/CMS/224.html" title="wordpress程序在win和Linux系统下的伪静" target=_blank>
+  <img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-140316220Q1558.jpg' alt='wordpress程序在win和Linux系统下的伪静' width=280 height=180 />
+  <STRONG>wordpress程序在win和Linux系统下的伪静</STRONG> </a>
+  </LI>
+
+  
+</UL></DIV>
+
+
+<DIV class="star box">
+<H4><STRONG><A href="http://www.mahaixiang.cn/seoyjy/" target=_blank>SEO研究院</A></STRONG> <A href="http://www.mahaixiang.cn/seoyjy/" target=_blank>更多>></A></H4>
+
+<DIV class=star01>
+<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+    <td width='50%'>
+<a href="http://www.mahaixiang.cn/seoyjy/173.html" title="判断网站被黑的特征表现及解决方法" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/2013/1-140Z6152355O3.jpg' alt='判断网站被黑的特征表现及解决方法' width=130 height=80 /></a>
+    </td>
+    <td width='50%'>
+<a href="http://www.mahaixiang.cn/seoyjy/108.html" title="SEO实战经验：如何对网站进行全面改版而不被降权" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/2012/1-14062922225N04.jpg' alt='SEO实战经验：如何对网站进行全面改版而不被降权' width=130 height=80 /></a>
+    </td>
+    </tr>
+    </table>
+  
+</DIV>
+
+<UL>
+
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/451.html" title="百度快照更新是什么意思？" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/1403/1-14031G00433316.jpg' alt='百度快照更新是什么意思？' width=60 height=60 /> 百度快照更新是什么意思？</a> 
+<BR>
+<SPAN>最近发现有很多刚入SEO行业的新手对网站seo的技巧有很多的误区，……</SPAN>
+</LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/609.html" title="什么是灰帽SEO技术？" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/1406/1-140604131225U9.jpg' alt='什么是灰帽SEO技术？' width=60 height=60 /> 什么是灰帽SEO技术？</a> 
+<BR>
+<SPAN>一说到SEO技术，可能大家想到的就是白帽SEO技术和黑帽SEO技术，……</SPAN>
+</LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/193.html" title="搜索引擎对相似图片搜索识别的" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/130402/1_040216003322O.jpg' alt='搜索引擎对相似图片搜索识别的' width=60 height=60 /> 搜索引擎对相似图片搜索识别的</a> 
+<BR>
+<SPAN>最近一个朋友在跟我聊网站流量的时候，说他的前段时间刚做了一个……</SPAN>
+</LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/59.html" title="什么是白帽seo？" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/120821/1-120R1100K0G4-lp.jpg' alt='什么是白帽seo？' width=60 height=60 /> 什么是白帽seo？</a> 
+<BR>
+<SPAN>白帽seo 白帽SEO就是采用公正的手法，正确的SEO的思维，合理优化……</SPAN>
+</LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/1900.html" title="搜索引擎的分类有哪些？" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/1706/1-1F614105Q0316.jpg' alt='搜索引擎的分类有哪些？' width=60 height=60 /> 搜索引擎的分类有哪些？</a> 
+<BR>
+<SPAN>搜索引擎（Search Engine）是指根据一定的策略、运用特定的计算……</SPAN>
+</LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/800.html" title="锚文本链接是什么？" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/1409/1-140911154342N0.jpg' alt='锚文本链接是什么？' width=60 height=60 /> 锚文本链接是什么？</a> 
+<BR>
+<SPAN>锚文本又称锚文本链接，英文名叫anchor text，是链接的一种形式……</SPAN>
+</LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/8.html" title="全面解析百度权重的秘密" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/120808/1-120PQ505240-L.jpg' alt='全面解析百度权重的秘密' width=60 height=60 /> 全面解析百度权重的秘密</a> 
+<BR>
+<SPAN>我们在搜索引擎上找东西是输入一个关键词然后搜索引擎就会针对这……</SPAN>
+</LI>
+<LI>
+<a href="http://www.mahaixiang.cn/seoyjy/966.html" title="详解网站被百度惩罚降权的具体" target=_blank>
+<img src='http://www.mahaixiang.cn/uploads/allimg/1412/1-1412111023001J.jpg' alt='详解网站被百度惩罚降权的具体' width=60 height=60 /> 详解网站被百度惩罚降权的具体</a> 
+<BR>
+<SPAN>网站被惩罚或降权是很多站长和SEO最为关注及敏感的事情，通常我……</SPAN>
+</LI>
+
+
+</UL></DIV>
+
+<DIV class="editorChoice box">
+<H4><STRONG>本月热点文章</STRONG></H4>
+<UL>
+<LI class=topRank><EM>1</EM> 
+<a href='http://www.mahaixiang.cn/bkwb/879.html' title="微信电商到底该怎么做？" target=_blank>微信电商到底该怎么做？</a>
+</LI>
+<LI class=topRank><EM>2</EM> 
+<a href='http://www.mahaixiang.cn/html/859.html' title="HTML5的主要技术组成部分及功能介" target=_blank>HTML5的主要技术组成部分及功能介</a>
+</LI>
+<LI class=topRank><EM>3</EM> 
+<a href='http://www.mahaixiang.cn/seowd/1333.html' title="网址前面为什么要加WWW" target=_blank>网址前面为什么要加WWW</a>
+</LI>
+<LI class=topRank><EM>4</EM> 
+<a href='http://www.mahaixiang.cn/nryx/863.html' title="内容营销的内容分类和内容灵感" target=_blank>内容营销的内容分类和内容灵感</a>
+</LI>
+<LI class=topRank><EM>5</EM> 
+<a href='http://www.mahaixiang.cn/zcfz/704.html' title="一个资深公关人对公关行业的理解和" target=_blank>一个资深公关人对公关行业的理解和</a>
+</LI>
+<LI class=topRank><EM>6</EM> 
+<a href='http://www.mahaixiang.cn/seoyjy/396.html' title="如何做好网站的高质量链接？" target=_blank>如何做好网站的高质量链接？</a>
+</LI>
+<LI class=topRank><EM>7</EM> 
+<a href='http://www.mahaixiang.cn/shhmt/1062.html' title="提高社会化媒体营销效果的小技巧" target=_blank>提高社会化媒体营销效果的小技巧</a>
+</LI>
+<LI class=topRank><EM>8</EM> 
+<a href='http://www.mahaixiang.cn/seosw/1306.html' title="外包SEO优化项目的生命周期" target=_blank>外包SEO优化项目的生命周期</a>
+</LI>
+<LI class=topRank><EM>9</EM> 
+<a href='http://www.mahaixiang.cn/o2o/1525.html' title="O2O营销模式的深入解析" target=_blank>O2O营销模式的深入解析</a>
+</LI>
+<LI class=topRank><EM>10</EM> 
+<a href='http://www.mahaixiang.cn/wzjc/881.html' title="依靠移动互联网赚钱的10个商业模式" target=_blank>依靠移动互联网赚钱的10个商业模式</a>
+</LI>
+<LI class=topRank><EM>11</EM> 
+<a href='http://www.mahaixiang.cn/jhsj/1253.html' title="交互设计的七大定律" target=_blank>交互设计的七大定律</a>
+</LI>
+<LI class=topRank><EM>12</EM> 
+<a href='http://www.mahaixiang.cn/zimeiti/1805.html' title="我对自媒体的一些看法" target=_blank>我对自媒体的一些看法</a>
+</LI>
+<LI class=topRank><EM>13</EM> 
+<a href='http://www.mahaixiang.cn/taobaoSEO/1842.html' title="淘宝客服的售前售后沟通技巧案例分" target=_blank>淘宝客服的售前售后沟通技巧案例分</a>
+</LI>
+<LI class=topRank><EM>14</EM> 
+<a href='http://www.mahaixiang.cn/jjjq/25.html' title="什么是百度竞价？跟传统媒体的区别" target=_blank>什么是百度竞价？跟传统媒体的区别</a>
+</LI>
+
+</UL>
+</DIV> 
+
+
+
+</DIV>
+<div style="clear: both"></div>
+</DIV>
+
+
+<DIV class="links box">
+<H4><STRONG>友情链接</STRONG> </H4>
+
+<DIV class=link>
+
+<a href='http://www.mahaixiang.cn' target='_blank'>SEO博客</a> <a href='http://www.mahaixiang.cn/WLYX/' target='_blank'>网络营销</a> <a href='http://www.shijielishi.com' target='_blank'>世界历史</a> <a href='http://shenyongxiang.com' target='_blank'>seo</a> <a href='http://www.skyh.cn' target='_blank'>seo优化</a> <a href='http://zhangliseo.com' target='_blank'>张力营销博客</a> <a href='http://www.shenhuibin.com' target='_blank'>网络营销技巧</a> <a href='http://www.chenhequn.com' target='_blank'>网站优化</a> <a href='http://www.yixiaoxi.com' target='_blank'>无锡seo</a> <a href='http://liyongseo.com/' target='_blank'>网站优化</a> <a href='http://www.xminseo.com' target='_blank'>seo</a> <a href='http://www.qqseo8.com/' target='_blank'>seo学堂</a> <a href='http://www.seozf.com/' target='_blank'>seo</a> <a href='http://www.yunkeseo.com' target='_blank'>seo顾问服务</a> <a href='http://www.tooseo.com' target='_blank'>网赚</a> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</DIV>
+</DIV></DIV>
+
+<DIV class=SW_footer>
+<DIV class=ft>
+<DIV class=slogan>
+<DIV class=log2><A href="http://www.mahaixiang.cn" title="马海祥博客-专注于分享seo思维和sem网络营销的医疗SEO博客" target=_blank></A></DIV>
+<span><SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/style/bdfx.js"></SCRIPT></span>
+</DIV>
+
+<DIV class=ft_item>
+<DIV class=f5>关于博客</DIV>
+<UL>
+  <LI><A href="http://www.mahaixiang.cn" target=_blank>博主博客</A> 
+  <SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/style/lxfs.js"></SCRIPT>
+  </LI></UL></DIV>
+<DIV class=ft_item>
+<DIV class=f5>博客指南</DIV>
+<UL>
+  <LI><A href="http://www.mahaixiang.cn/jrht/" target=_blank>今日SEO话题</A> 
+  <LI><A href="http://www.mahaixiang.cn/seoyjy/" target=_blank>SEO研究院</A> 
+  <LI><A href="http://www.mahaixiang.cn/sitemap.html" target=_blank>网站地图</A> 
+  <LI><A href="http://www.mahaixiang.cn/rssmap.html" target=_blank>RSS地图</A> 
+</LI></UL></DIV>
+<DIV class=ft_item>
+<DIV class=f5>SEO思维</DIV>
+<UL>
+  <LI><A href="http://www.mahaixiang.cn/yyseo/" target=_blank>医院SEO</A> 
+  <LI><A href="http://www.mahaixiang.cn/qyseo/" target=_blank>企业SEO</A> 
+  <LI><A href="http://www.mahaixiang.cn/znseo/" target=_blank>站内SEO</A>
+  <LI><A href="http://www.mahaixiang.cn/zwseo/" target=_blank>站外SEO</A> 
+  <LI><A href="http://www.mahaixiang.cn/jjjq/" target=_blank>竞价技巧</A>
+  </LI></UL></DIV>
+<DIV class=ft_item>
+<DIV class=f5>网站制作</DIV>
+<UL>
+  <LI><A href="http://www.mahaixiang.cn/wzch/" target=_blank>网站策划</A> 
+  <LI><A href="http://www.mahaixiang.cn/wzsj/" target=_blank>网站设计</A> 
+  <LI><A href="http://www.mahaixiang.cn/Photoshop/" target=_blank>Photoshop教程</A> 
+  <LI><A href="http://www.mahaixiang.cn/CMS/" target=_blank>CMS管理系统</A> 
+  </LI></UL></DIV>
+<DIV class=ft_item>
+<DIV class=f5>资源下载</DIV>
+<UL>
+  <LI><A href="http://www.mahaixiang.cn/rjxz/" target=_blank>软件下载</A> 
+  <LI><A href="http://www.mahaixiang.cn/dzwd/" target=_blank>电子文档</A> 
+  <LI><A href="http://www.mahaixiang.cn/zyxz/zxgj/" target=_blank>在线工具</A>
+  <LI><SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/style/bdtj.js"></SCRIPT>
+  <LI><SCRIPT type=text/javascript src="http://www.mahaixiang.cn/templets/MA/style/zztj.js"></SCRIPT>
+</LI></UL>
+</DIV>
+<div style="clear: both"></div>
+</DIV></DIV>
+</BODY></HTML>

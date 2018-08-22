@@ -1,0 +1,45 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div class="main-title">
+		<h2>{$meta_title}</h2>
+	</div>
+		<div class="tab-wrap">
+		<ul class="tab-nav nav">
+			<li class="current"><a href="{:U('?id='.$key)}">基本配置</a></li>
+		</ul>
+		<div class="tab-content">
+	<form action="{:U('createCate')}" method="post" class="form-horizontal" target="stafrm">
+		<div class="form-item">
+			<label class="item-label">选择分类：<span class="check-tips">（）</span> </label>
+			<div class="controls">
+				<select name="category_id">
+					<volist name="list" id="vo">
+						<option value="{$vo.id}">{$vo.prev}{$vo.title}</option>
+					</volist>
+				</select>
+			</div>
+		</div>
+		<!--
+		<div class="form-item">
+			<label class="item-label">是否更新子栏目：<span class="check-tips">（）</span> </label>
+			<div class="controls">
+				<label class="radio"><input value="0" name="display" checked="checked" type="radio">更新子级栏目 </label>
+				<label class="radio"><input value="1" name="display" type="radio"> 仅更新所选栏目</label>
+			</div>
+		</div> -->
+	</div>
+		<div class="form-item">
+			<label class="item-label"></label>
+			<div class="controls">
+				<empty name="list"><button type="submit" disabled class="btn submit-btn disabled" target-form="form-horizontal">确 定</button><else/><button type="submit" class="btn submit-btn " target-form="form-horizontal">确 定</button></empty>
+				<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+			</div>
+		</div>
+	</form>
+			</div>
+		<div class="actinfo">
+			<iframe name="stafrm" id="stafrm" width="100%" height="100%" frameborder="0"></iframe>
+		</div>
+	</div>
+</block>

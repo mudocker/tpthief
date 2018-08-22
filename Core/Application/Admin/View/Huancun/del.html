@@ -1,0 +1,111 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div class="main-title">
+		<h2>{$meta_title}</h2>
+	</div>
+	<div class="cf">
+		<div class="fl">
+			<a class="btn delall confirm ajax-get" href="{:U('Huancun/delAll')}">一键删除所有缓存 (不包括图片)</a>
+		</div>
+	</div>
+	<div class="data-table">
+		<table>
+		<!-- 表头 -->
+		<thead>
+		<tr>
+			<th class="row-selected row-selected"></th>
+			<th>缓存说明</th>
+			<th>目录</th>
+			<th>大小</th>
+			<th>操作</th>
+		</tr>
+		</thead>
+
+		<!-- 列表 -->
+		<tbody>
+		<tr>
+			<td></td>
+			<td>首页</td>
+			<td>./Runtime/Html/index.html</td>
+			<td>{$indexsize}</td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delFile?file=index')}">删除</a></td>                    
+		</tr>
+		<tr>
+			<td></td>
+			<td>css缓存</td>
+			<td>./Runtime/Html/css</td>
+			<td><a class="no-refresh getsize" href="{:U('Huancun/getFilesize?file=css')}">点击获取</a></td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delFile?file=css')}">删除</a></td>                    
+		</tr>
+		<tr>
+			<td></td>
+			<td>js缓存</td>
+			<td>./Runtime/Html/js</td>
+			<td><a class="no-refresh getsize" href="{:U('Huancun/getFilesize?file=js')}">点击获取</a></td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delFile?file=js')}">删除</a></td>                    
+		</tr>
+		<tr>
+			<td></td>
+			<td>html缓存</td>
+			<td>./Runtime/Html/data</td>
+			<td><a class="no-refresh getsize" href="{:U('Huancun/getFilesize?file=data')}">点击获取</a></td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delFile?file=data')}">删除</a></td>                    
+		</tr>
+		<tr>
+			<td></td>
+			<td>图片缓存</td>
+			<td>./Runtime/Html/img</td>
+			<td><a class="no-refresh getsize" href="{:U('Huancun/getFilesize?file=img')}">点击获取</a></td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delFile?file=img')}">删除</a></td>                    
+		</tr>
+		<tr>
+			<td></td>
+			<td>网站配置</td>
+			<td>./Runtime/Config/webconfig</td>
+			<td>{$webconfsize}</td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delConf?file=webconfig')}">删除</a></td>                    
+		</tr>
+		<tr>
+			<td></td>
+			<td>采集规则配置文件</td>
+			<td>./Runtime/Config/cjconfig</td>
+			<td>{$cjconfsize}</td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delConf?file=cjconfig')}">删除</a></td>                    
+		</tr>
+		<tr>
+			<td></td>
+			<td>缓存配置</td>
+			<td>./Runtime/Config/hconfig</td>
+			<td>{$hconfsize}</td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delConf?file=hconfig')}">删除</a></td>                    
+		</tr>
+		<!--<tr>
+			<td></td>
+			<td><font color="#f00">清除所有缓存</font></td>
+			<td></td>
+			<td></td>
+			<td><a class="confirm ajax-get" href="{:U('Huancun/delFile?file=all')}">删除</a></td>                    
+		</tr>-->
+		</tbody>
+	</table>
+	</div>
+<script>
+$(function(){
+	var size = $('.alert-content').val();
+	$('.getsize').click(function(){
+		var $this = $(this);
+		var target = $this.attr("href");
+		$.get(target).success(function(data){
+			console.log(data.info);
+			if (data.status == 1) {
+				$this.html(data.info);
+			}else{
+				$this.html(data.info);			
+			}
+		});	
+		return false;
+	});
+});
+</script>
+</block>

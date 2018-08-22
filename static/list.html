@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--由烟台网亿网络科技有限公司设计制作,如果您有任何意见或建议请致电0535-6262050-->
+<title>资讯参考 - 烟台港集团有限公司|YanTai Port</title>
+<meta name="keywords" content="烟台港 海港 轮渡 码头 海运 港口 水运 烟台港股份">
+<meta name="description" content="烟台港集团网-YanTaiPort.Com.Cn">
+<link rel="stylesheet" href="statics/css/style1.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="http://www.yantaiport.com.cn/statics/css/16888/ytgstyle.css" type="text/css" media="screen" charset="utf-8">
+<script language="javascript" type="text/javascript">
+window.onerror = function()
+{
+return true;//不显示脚本错误信息
+}
+</script>
+<!--ie6 png图片透明样式-->
+<!--[if IE 6]>
+<!--<script src="statics/js/DD_belatedPNG_0.0.8a.js"></script>-->
+<script>
+  DD_belatedPNG.fix('img,#imgplay');
+</script>
+<![endif]--> 
+<script src="statics/js/16888/jQuery.js" type="text/javascript"></script>
+ <script language="javascript">
+function tabChange(obj,id)
+{
+var arrayli = obj.parentNode.getElementsByTagName("li"); //获取li数组
+var arrayul = document.getElementById(id).getElementsByTagName("ul"); //获取ul数组
+
+
+for(i=0;i<arrayul.length;i++)
+{
+if(obj==arrayli[i])
+{
+arrayli[i].className = "cli";
+arrayul[i].className = "";
+}
+else
+{
+arrayli[i].className = "";
+arrayul[i].className = "hidden";
+}
+}
+}
+</script> 
+
+<script type="text/javascript">
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+ var menu=document.getElementById(name+i);
+ var con=document.getElementById("con_"+name+"_"+i);
+	 menu.className=i==cursel?"cli":"";
+	 con.style.display=i==cursel?"block":"none";
+  }
+}
+</script>
+<script type="text/javascript">
+//新闻 滑动特效代码
+function $id(id){return document.getElementById(id)}
+function goTab(num,tab_num,pre)
+{
+	for(var i=0;i<tab_num;i++){
+		$id(pre+"_info_"+i).style.display="none";
+		$id(pre+"_tab_"+i).style.backgroundImage="none"; 
+	};
+	$id(pre+"_tab_"+num).style.backgroundImage ="url(./images/bg_news_menu.jpg)";
+	$id(pre+"_info_"+num).style.display="block";
+}
+function goTab2(num,tab_num,pre)
+{
+	for(var i=0;i<tab_num;i++){
+		$id(pre+"_info_"+i).style.display="none";
+	};
+	$id(pre+"_info_"+num).style.display="block";
+	if(num==0)
+	{
+		$id(pre+"_tab_0").style.backgroundImage ="url(./images/bg_bbsriveron1.jpg)";
+		$id(pre+"_tab_1").style.backgroundImage ="url(./images/bg_bbsriverout2.jpg)";
+		
+		}
+	else
+	{
+		$id(pre+"_tab_1").style.backgroundImage ="url(./images/bg_bbsriveron2.jpg)";
+		$id(pre+"_tab_0").style.backgroundImage ="url(./images/bg_bbsriverout1.jpg)";
+		}
+	
+	if(num==0)
+	{
+		$id("chag_con").innerHTML="<a href='http://bbs.fblife.com' target='_blank'>bbs.fblife.com</a>";
+	}
+		else
+	{
+		$id("chag_con").innerHTML="<a href='http://fbbar.fblife.com' target='_blank'>fbbar.fblife.com</a>";
+	}
+}
+
+
+
+
+function goTab3(num,tab_num,pre)
+{
+	for(var i=0;i<tab_num;i++){
+		$id(pre+"_info_"+i).style.display="none";
+		$id(pre+"_tab_"+i).className=""; 
+	};
+	$id(pre+"_tab_"+num).className="xfri_zhongxinon";
+	$id(pre+"_info_"+num).style.display="block";
+}
+
+function goTab4(num,tab_num,pre)
+{
+	for(var i=0;i<tab_num;i++){
+		$id(pre+"_info_"+i).style.display="none";
+	$id(pre+"_tab_"+i).src="./index/images/pingce_hidden.jpg";
+	$id(pre+"_tab_"+i).style.height="20px";
+	$id(pre+"_tit_"+i).className="xfri_pctit2";
+	};
+     $id(pre+"_tab_"+num).src="./index/images/pingce_show.jpg";
+	$id(pre+"_info_"+num).style.display="block";
+	$id(pre+"_tab_"+num).style.height="20px";
+	$id(pre+"_tit_"+num).className="xfri_pctit21";
+}
+
+
+var nll=0;
+
+ function view2(){
+	
+    nll=nll+1;
+	
+	if(nll>4)
+	{ nll=0; }
+	
+	for(i=0;i<document.getElementById("zanzhushan_id").children.length;i++)
+	{
+         if(i==nll) 
+		 { document.getElementById("zanzhushan_id").children[i].style.display='block';
+		 }
+		 else
+         { document.getElementById("zanzhushan_id").children[i].style.display='none';
+ 
+		 }
+		  
+    }
+	
+ }
+ function view3()
+ {
+    nll=nll-1;
+	if(nll<0)
+	{ nll=4; }
+	for(i=0;i<document.getElementById("zanzhushan_id").children.length;i++)
+	{
+         if(i==nll) 
+		 { document.getElementById("zanzhushan_id").children[i].style.display='block';
+		 }
+		 else
+         { document.getElementById("zanzhushan_id").children[i].style.display='none';
+ 
+		 }
+		  
+    }
+	
+ }
+ 
+ function view5(){
+	 
+    nll=nll+1;
+	
+	if(nll>4)
+	{ nll=0; }
+	
+	for(i=0;i<document.getElementById("zanzhushan2_id").children.length;i++)
+	{ 
+         if(i==nll) 
+		 { document.getElementById("zanzhushan2_id").children[i].style.display='block';
+		 }
+		 else
+         { document.getElementById("zanzhushan2_id").children[i].style.display='none';
+ 
+		 }
+		  
+    }
+	
+ }
+ function view6()
+ {
+    nll=nll-1;
+	if(nll<0)
+	{ nll=4; }
+	for(i=0;i<document.getElementById("zanzhushan2_id").children.length;i++)
+	{
+         if(i==nll) 
+		 { document.getElementById("zanzhushan2_id").children[i].style.display='block';
+		 }
+		 else
+         { document.getElementById("zanzhushan2_id").children[i].style.display='none';
+ 
+		 }
+		  
+    }
+	
+ }
+ 
+ function view8(){
+	
+    nll=nll+1;
+	
+	if(nll>4)
+	{ nll=0; }
+	
+	for(i=0;i<document.getElementById("zanzhushan3_id").children.length;i++)
+	{
+         if(i==nll) 
+		 { document.getElementById("zanzhushan3_id").children[i].style.display='block';
+		 }
+		 else
+         { document.getElementById("zanzhushan3_id").children[i].style.display='none';
+ 
+		 }
+		  
+    }
+	
+ }
+ function view9()
+ {
+    nll=nll-1;
+	if(nll<0)
+	{ nll=4; }
+	for(i=0;i<document.getElementById("zanzhushan3_id").children.length;i++)
+	{
+         if(i==nll) 
+		 { document.getElementById("zanzhushan3_id").children[i].style.display='block';
+		 }
+		 else
+         { document.getElementById("zanzhushan3_id").children[i].style.display='none';
+ 
+		 }
+		  
+    }
+	
+ }
+ 
+ function view11(){
+	
+    nll=nll+1;
+	
+	if(nll>4)
+	{ nll=0; }
+	
+	for(i=0;i<document.getElementById("zanzhushan4_id").children.length;i++)
+	{
+         if(i==nll) 
+		 { document.getElementById("zanzhushan4_id").children[i].style.display='block';
+		 }
+		 else
+         { document.getElementById("zanzhushan4_id").children[i].style.display='none';
+ 
+		 }
+		  
+    }
+	
+ }
+ function view12()
+ {
+    nll=nll-1;
+	if(nll<0)
+	{ nll=4; }
+	for(i=0;i<document.getElementById("zanzhushan4_id").children.length;i++)
+	{
+         if(i==nll) 
+		 { document.getElementById("zanzhushan4_id").children[i].style.display='block';
+		 }
+		 else
+         { document.getElementById("zanzhushan4_id").children[i].style.display='none';
+ 
+		 }
+		  
+    }
+	
+ }
+</script>
+<script type="text/javascript">
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+ var menu=document.getElementById(name+i);
+ var con=document.getElementById("con_"+name+"_"+i);
+	 menu.className=i==cursel?"cli":"";
+	 con.style.display=i==cursel?"block":"none";
+  }
+}
+</script>
+ <script type="text/javascript">
+  window.onload = function(){
+	var small = document.getElementById("smallImg")
+	var big = document.getElementById("bigImg")
+		small.onmouseover = function(){
+			big.style.display = "block"
+		}	
+		small.onmouseout = function(){
+			big.style.display = "none"
+		}
+  }
+  </script>
+<script type="text/javascript">
+function onsubmits(){
+	if(document.getElementById('q').value==''){
+		alert("请输入关键词");
+		return false;
+	}
+}
+</script>
+<script type="text/javascript" src="http://www.yantaiport.com.cn/statics/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://www.yantaiport.com.cn/statics/js/jquery.sgallery.js"></script>
+<script type="text/javascript" src="http://www.yantaiport.com.cn/statics/js/search_common.js"></script>
+<script type="text/javascript" src="http://www.yantaiport.com.cn/statics/js/16888/iStu12.js"></script>
+<script type="text/javascript" src="http://www.yantaiport.com.cn/statics/js/16888/jquery-1.11.1.min.js"></script>
+<script language="javascript"> 
+function setfont(size) 
+{ 
+var obj; 
+obj=document.getElementById("content"); 
+obj.style.fontSize=size; 
+obj.style.lineHeight=size*2; 
+//obj.style.color="#ff0000"; 
+} 
+</script> 
+<script src="statics/js/16888/home_banner.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+<div class="page">
+    <!--header是头部 开始-->
+<div class="mnshead">
+    	<div class="mnsheadn">
+        	<div class="mnlogo"><a href="http://www.yantaiport.com.cn/"><img src="statics/img/logo.png" alt="烟台港集团有限公司" title="烟台港集团有限公司" /></a></div>
+            <div class="yhead">
+            	<div class="yybb">
+               	<a href="http://www.yantaiport.com.cn/ewangzhan/" target="_blank" class="yybg1">ENGLISH</a>
+                <a href="http://www.yantaiport.com.cn/" class="yybg2">中文简体</a>
+                <a href="http://ms1.yantaiport.com.cn/" target="_blank" class="yybg3" >企业邮箱</a>
+                <a class="yybg4" href="http://www.yantaiport.com.cn/admin.php" target="_blank" style="padding-right:0;">后台登陆</a>
+                </div>
+                <div class="mnsou">
+                	
+<form name="search" type="get" style="margin:0; padding:0" onsubmit="return onsubmits();">
+<input type="hidden" name="m" value="search"/>
+<input type="hidden" name="c" value="index"/>
+<input type="hidden" name="a" value="init"/>
+<input type="hidden" name="typeid" value="1" id="typeid"/>
+<input type="hidden" name="siteid" value="1" id="siteid"/>
+
+<input name="q" id="q" type="text" class="mnsouz" value="关键词" onfocus="if(this.value=='关键词'){this.value=''};this.style.color='black';" onblur="if(this.value==''||this.value=='关键词'){this.value='关键词';this.style.color='gray';}" />
+<input name="" type="submit" class="mnsouy" value="" />
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="mnnavbg">
+ <div class="header-menu">
+		<div class="w1040  menu-wrap">
+<div class="menu2">
+    <ul>
+   <li><a href="http://www.yantaiport.com.cn/">集团首页</a></li>
+
+	
+   <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=13" >集团概况</a>
+            <div class="menuson">
+                <div class="fle menuson-img"><img src="statics/img/dh1.jpg" width="110" height="110" />
+                </div>
+                <div class="fle menuson-nav">
+
+ 
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=13">领导致辞</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=58">集团简介</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=85">组织机构</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=10">区位优势</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=16">核心业务</a>
+ 
+              </div>
+                <div class="fri menuson-con">
+                    <p>    1861年开埠的烟台港，目前是中国环渤海港口群主枢纽港，是中国沿海主要港口之一。集团有限公司为综合性大型企业，现有员工1...</p>
+                </div>
+            </div>
+        </li>
+	
+   <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=17" >新闻中心</a>
+            <div class="menuson">
+                <div class="fle menuson-img"><img src="statics/img/dh2.jpg" width="110" height="110" />
+                </div>
+                <div class="fle menuson-nav">
+
+ 
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=18">重要新闻</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=19">港区新闻</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=20">图片报道</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=21">视频新闻</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=22">投资伙伴</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=23">职工星座</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=24">专题活动</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=25">资讯参考</a>
+ 
+              </div>
+                <div class="fri menuson-con">
+                    <p>近年来，集团公司以创建省级文明单位为抓手，加强党的建设、思想政治工作和企业文化建设，不断创新工作内容和形式，着力提升职工队...</p>
+                </div>
+            </div>
+        </li>
+	
+   <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=27" >港口文化</a>
+            <div class="menuson">
+                <div class="fle menuson-img"><img src="statics/img/dh3.jpg" width="110" height="110" />
+                </div>
+                <div class="fle menuson-nav">
+
+ 
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=27">港口理念</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=28">战略&目标</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=29">港口标识</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=30">获得荣誉</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=31">品牌建设</a>
+ 
+              </div>
+                <div class="fri menuson-con">
+                    <p>坚持实施&ldquo;一个中心、两个基本点、一条海岸线&rdquo;的战略方针。
+&ldquo;一个中心&rdquo;就是要打造烟台港的核心竞争力，形成强大的竞争优势，保持...</p>
+                </div>
+            </div>
+        </li>
+	
+   <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=33" >临港产业</a>
+            <div class="menuson">
+                <div class="fle menuson-img"><img src="statics/img/dh4.jpg" width="110" height="110" />
+                </div>
+                <div class="fle menuson-nav">
+
+ 
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=33">临港产业</a>
+ 
+              </div>
+                <div class="fri menuson-con">
+                    <p>         烟台保税港区设立于烟台市北部，规划面积7.26平方公里，划分为港口作业区、物流作业区、公共查验区、出口加工作...</p>
+                </div>
+            </div>
+        </li>
+	
+   <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=34" >视觉港湾</a>
+            <div class="menuson">
+                <div class="fle menuson-img"><img src="statics/img/dh5.jpg" width="110" height="110" />
+                </div>
+                <div class="fle menuson-nav">
+
+ 
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=35">宣传片</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=36">MV类</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=37">港区风光图</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=38">历史长廊</a>
+ 
+              </div>
+                <div class="fri menuson-con">
+                    <p>通过集装箱干线港、中国北方客滚运输中心、战略石油储备基地和临港工业基地建设，将烟台港建设成为中国沿海重要的主枢纽港和国际综...</p>
+                </div>
+            </div>
+        </li>
+	
+   <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=40" >社会责任</a>
+            <div class="menuson">
+                <div class="fle menuson-img"><img src="statics/img/dh6.jpg" width="110" height="110" />
+                </div>
+                <div class="fle menuson-nav">
+
+ 
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=40">社会公益</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=41">环保安全</a>
+ 
+              </div>
+                <div class="fri menuson-con">
+                    <p>烟台港勇于担当社会责任，对内悉心打造和谐企业，建设可持续发展的环境友好型绿色生态港口；对外积极参与社会慈善事业，担当起国企...</p>
+                </div>
+            </div>
+        </li>
+	
+   <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=44" >联系我们</a>
+            <div class="menuson">
+                <div class="fle menuson-img"><img src="statics/img/dh7.jpg" width="110" height="110" />
+                </div>
+                <div class="fle menuson-nav">
+
+ 
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=44">关于我们</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=45">联系方式</a>
+ 
+  
+<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=46">人才招聘</a>
+ 
+              </div>
+                <div class="fri menuson-con">
+                    <p>烟台港集团有限公司 YANTAI PORT GROUP CO.,LTD 地址：烟台市芝罘区北马路155号 Adderss：Beima Road 155，Zhifu District...</p>
+                </div>
+            </div>
+        </li>
+
+         
+    </ul>
+</div>
+		</div>
+<div class="menu-son-bg"></div>
+	</div>
+<script type="text/javascript">
+$(function(){
+	$(".menu2").hover(function(){
+		$(".menu-son-bg").stop().animate({"height":"187px"},350)	
+	},function(){
+		$(".menu-son-bg").stop().animate({"height":"0"},0)	
+	});
+	$(".menu2 li").hover(function(){
+		$(this).children("a").addClass("hover");
+		$(this).children("div").stop(false,true).fadeIn(300);
+	},function(){
+		$(this).children("a").removeClass("hover");
+		$(this).children("div").stop(true,true).fadeOut(0);
+	})	
+})
+</script>         
+    </div>
+    <!--menu结束-->
+<div class="w100 bg22 pb2 hidden">
+	<div class="w100 bg24 tcenter hidden">
+    <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="216">
+        <param name="movie" value="xwzx.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="transparent" />
+        <param name="swfversion" value="6.0.65.0" />
+        <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="xwzx.swf" width="100%" height="216">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <param name="swfversion" value="6.0.65.0" />
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+          <div>
+            <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+    
+    </div>
+</div>
+<div class="w100 center hidden bg25">
+<div class="w980px center mt18px hidden m_bbg1">
+  <div class="w250px left">
+  <div class="w248px center m_bd3">
+  	<div class="w248px bg26">
+    	<div class="m_jtgk"><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=17"><span class="wr font16px pl30 c000 strong">新闻中心</span><span class="ar c7b7b7b pl8">New</span></a></div>
+    </div>
+    <div class="w248px menu">
+    	<ul>
+                                            	<li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=18" >重要新闻</a></li>
+                                	<li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=19" >港区新闻</a></li>
+                                	<li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=20" >图片报道</a></li>
+                                	<li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=21" >视频新闻</a></li>
+                                	<li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=22" >投资伙伴</a></li>
+                                	<li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=23" >职工星座</a></li>
+                                	<li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=24" >专题活动</a></li>
+                                	<li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=25" class="m_dh_f">资讯参考</a></li>
+                                    </ul>
+    </div>
+    <div class="w248px"><img src="http://www.yantaiport.com.cn/statics/images//news1.jpg" /></div>
+  </div>
+   <div class="w250px left pt10">
+  <div class="w248px center m_bd3">
+  	<div class="w248px bg26">
+    	<div class="m_jtgk"><span class="wr font16px pl30 c000 strong">商务专区</span><span class="ar c7b7b7b pl8">Business Area</span></div>
+    </div>
+    <div class="w248px menu">
+    	<ul>
+           <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=101" target="_blank">集装箱班轮</a></li>
+            <li><a href="http://www.bohaiferry.com/" target="_blank">网上订票</a></li>
+            <li><a href="http://www.bohaiferry.com/dhwl.asp" target="_blank">滚装物流</a></li>
+            <li><a href="http://www.yantaiport.com.cn/scxx.asp" target="_blank">生产信息</a></li>
+            <li><a href="http://www.ytportedi.com/platform/default1.action" target="_blank">集装箱物流信息网</a></li>
+            <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=102" target="_blank">货运代理</a></li>
+            <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=103" target="_blank">船舶代理</a></li>
+        </ul>
+    </div>
+   </div>
+   </div>
+      
+
+<div class="w250px pt10 left">
+<script type="text/javascript">
+function onsubmitss(){
+	if(document.getElementById('qd').value==''){
+		alert("请输入关键词");
+		return false;
+	}
+}
+</script>
+
+<form name="search" type="get" style="margin:0; padding:0" onsubmit="return onsubmitss();">
+    <input type="hidden" name="m" value="search"/>
+    <input type="hidden" name="c" value="index"/>
+    <input type="hidden" name="a" value="init"/>
+    <input type="hidden" name="typeid" value="1" id="typeid"/>
+    <input type="hidden" name="siteid" value="1" id="siteid"/>
+  	<div class="w250px m_jtgk4" style="height:68px;">
+    	<div class="pl28 pt37 hidden">
+        	<span class="left w148px"><input name="q" id="qd" type="text" class="m_jtgk5" /></span>
+            <span class="left w56px pl5"><input type="submit" class="m_jtgk6" value=" " /></span>
+        </div>
+    </div>
+</form>
+    
+</div>  </div>
+  
+  <div class="right w715px">
+  	<div class="w715px hidden m_bbg2">
+    	<div class="left m_jtgk1"></div>
+    	<div class="left m_jtgk3 w689px h45px lineheight45px">
+        	<div class="left m_tb6 pl20 c004ea1 wr font16px">资讯参考</div>
+            <div class="right m_tb7 pl15 pr5 c444444">您现在的位置：<a href="http://www.yantaiport.com.cn">首页</a>&nbsp;<a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=17"><span class="m_tb8 pl10">新闻中心</span></a>&nbsp;<span class="m_tb8 c014596 pl10">资讯参考</span></div>
+        </div>
+    	<div class="left m_jtgk2"></div>
+    </div>
+    <div class="w715px bg27 mt10 pt20 hidden pb20">
+   
+          
+        <div class="w660px center">
+        	<div class="w653px m_tzhb1 lineheight25px"><span class="pl25 cfff strong left">资讯参考</span><span class="right pr15  c3a8cce"><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=70">更多>></a></span></div>
+        	<div class="w653px pt15 m_tzhb2">
+                        <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8261" class="pl15">全国首个港口价格负面清单出台</a>2018-07-05</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8259" class="pl15">天津出台港口价格行为规则 保护消费者及经营者合法权益 全国首创</a>2018-07-04</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8258" class="pl15">今年起在全国范围实施六大行动 推动大宗货物运输“公转铁”“公转水”</a>2018-07-04</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8254" class="pl15">中远海运港口旗下南通通海港口正式投入运营</a>2018-07-03</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8251" class="pl15">大湾区打造全球港口链</a>2018-07-02</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8250" class="pl15">中远海运港口旗下南通通海港口正式投入运营</a>2018-07-02</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8247" class="pl15">湖北：首次建造江海直达集装箱船</a>2018-06-29</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8246" class="pl15">国务院五举措 降低物流成本</a>2018-06-29</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8244" class="pl15">厦门：提升港口通关效率和服务水平</a>2018-06-28</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8243" class="pl15"> 重点港集装箱铁水联运量年均增超10%</a>2018-06-28</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8242" class="pl15">以智能化管理为核心 构建港口运营新模式</a>2018-06-27</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8241" class="pl15">中企收购澳大利亚东岸最大港口 海外港口布局实现六大洲全覆盖</a>2018-06-27</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8235" class="pl15">招商局港口借道深赤湾回A股 深圳东西港区整合在即</a>2018-06-25</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8234" class="pl15">“河北港口”APP正式上线</a>2018-06-22</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8229" class="pl15">四方签署“中国港口创新发展投资基金战略合作框架协议”</a>2018-06-21</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8227" class="pl15">吉大港新集装箱码头将于2018年底全面启用</a>2018-06-20</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8225" class="pl15">宜宾港与北部湾港正式签约建立战略合作关系</a>2018-06-19</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8221" class="pl15">招商局港口实现全球六大洲布局</a>2018-06-15</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8218" class="pl15">深圳盐田国际内陆港——醴陵港启动</a>2018-06-14</li>
+                         <li><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=show&catid=70&id=8215" class="pl15">嘉兴港转型高质量发展</a>2018-06-13</li>
+              
+            </div>
+        </div>
+   
+        </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div style="width:100%; margin:0 auto; background-color:#ECECEC;">
+<div style="width:1000px; margin:0 auto;">
+<div class="mnfen">
+<div class="left">
+<select name="" onchange="javascript:window.open(this.value)" style="margin:0 10px 0 0; border:1px solid #DDDDDD;width:180px;padding-left:3px;height:25px;background-color:#DDDDDD;color:#666;">
+<option>友情链接</option>
+        <option value="http://www.customs.gov.cn/publish/portal0/">中国海关</option>
+        <option value="http://www.aqsiq.gov.cn/">检查检疫</option>
+        <option value="http://www.msa.gov.cn/">中国海事</option>
+        <option value="http://ytbjz.yantai.gov.cn/">边防检查</option>
+        <option value="http://www.moc.gov.cn/">交通部</option>
+    
+         
+        </select>        
+<select name="" onchange="javascript:window.open(this.value)" style="margin:0 10px 0 0; border:1px solid #DDDDDD;width:180px;padding-left:3px;height:25px;background-color:#DDDDDD;color:#666;">
+<option>新闻媒体网站</option>
+<option value="http://www.yantailogistics.com.cn/">烟台市物流协会</option>
+<option value="http://www.chineseshipping.com.cn/">中华航运网</option>
+<option value="http://www.jiaodong.net/">胶东在线</option>
+<option value="http://www.shm.com.cn/">水母网</option>
+<option value="http://www.dzwww.com/">大众网</option>
+<option value="http://www.qq.com/">腾讯网</option>
+<option value="http://cn.yahoo.com/">雅虎</option>
+<option value="http://www.sohu.com/">搜狐</option>
+<option value="http://www.163.com/">网易</option>
+<option value="http://www.sina.com.cn/">新浪网</option>
+<option value="http://www.ifeng.com/">凤凰网</option>
+<option value="http://www.ce.cn/">中国经济网</option>
+<option value="http://www.cntv.cn/">中央网络电视台</option>
+<option value="http://www.eastday.com/">东方网</option>
+<option value="http://www.people.com.cn/">人民网</option>
+<option value="http://www.xinhuanet.com/">新华网</option>
+<option value="http://www.cntv.cn/">央视国际</option>
+<option value="http://www.eastday.com/">东方网</option>
+<option value="http://www.people.com.cn/">人民网</option>
+<option value="http://www.xinhuanet.com/">新华网</option>
+    
+</select>        
+<select name="" onchange="javascript:window.open(this.value)" style="margin:0 10px 0 0; border:1px solid #DDDDDD;width:180px;padding-left:3px;height:25px;background-color:#DDDDDD;color:#666;">
+<option>沿海港口网站</option>
+	<option value="http://www.ptacn.com/">天津港</option>
+	<option value="http://www.jtport.com.cn/">唐山港</option>
+	<option value="http://www.ykport.com.cn/">营口港</option>
+	<option value="http://www.portdalian.com/index.html">大连港</option>
+	<option value="http://www.qdport.com/">青岛港</option>
+	<option value="http://www.rzport.com/">日照港</option>
+	<option value="http://www.lygport.com.cn/html/index.aspx">连云港港</option>
+	<option value="http://www.ntport.com.cn/">南通港</option>
+	<option value="http://www.portshanghai.com.cn/">上海港</option>
+	<option value="http://www.fzport.com/">福州港</option>
+	<option value="http://www.ytport.com/">盐田港</option>
+	<option value="http://www.gzport.com/">广州港</option>
+	<option value="http://www.zjport.com/index.jsp">湛江港</option>
+    
+</select>        
+<select name="" onchange="javascript:window.open(this.value)" style="margin:0 10px 0 0; border:1px solid #DDDDDD;width:180px;padding-left:3px;height:25px;background-color:#DDDDDD;color:#666;">
+<option>相关行业网站</option>
+	<option value="http://www.webcargo.com.cn/webcargocn/index.asp">国际货运网</option>
+	<option value="http://www.shippingchina.com/">国际海运网</option>
+	<option value="http://www.zgsyb.com/">中国水运网</option>
+	<option value="http://www.chineseport.cn/">中国港口网</option>
+	<option value="http://www.thechoice.com.cn/newindex.php">道锐思</option>
+	<option value="http://www.cnshipping.com/">中海集团</option>
+	<option value="http://www.cosco.com/cn">中远集团</option>
+	<option value="http://www.bh-rescue.cn/">北海救助局</option>
+	<option value="http://www.ytmsa.gov.cn/">烟台海事局</option>
+	<option value="http://www.port.org.cn/">港口协会</option>
+	<option value="http://www.sdpc.gov.cn/">发改委</option>
+	<option value="http://www.moc.gov.cn/">交通运输部</option>
+    
+</select>        
+
+        </div>
+<div class="right">分享到：
+<a href="http://service.weibo.com/share/share.php?url=file%3A%2F%2F%2FC%3A%2FUsers%2Fwangyi%2FDesktop%2FUntitled-1.html%230-tsina-1-71829-397232819ff9a47a7b7e80a40613cfe1&title=&appkey=1343713053&searchPic=true" target="_blank"><img src="statics/img/fxtb(1).png" onmouseover="this.src='statics/img/fxtb1.png'" onmouseout="this.src='statics/img/fxtb(1).png'" width="28" height="28"></a>
+<a href="http://share.v.t.qq.com/index.php?c=share&a=index&url=file%3A%2F%2F%2FC%3A%2FUsers%2Fwangyi%2FDesktop%2FUntitled-1.html%230-tqq-1-32604-89b7933b38b0586d98eb9d131fa70b46&title=&appkey=801cf76d3cfc44ada52ec13114e84a96" target="_blank"><img src="statics/img/fxtb(2).png" onmouseover="this.src='statics/img/fxtb2.png'" onmouseout="this.src='statics/img/fxtb(2).png'" width="28" height="28"></a>
+<a href="http://connect.qq.com/widget/shareqq/index.html?url=file%3A%2F%2F%2FC%3A%2FUsers%2Fwangyi%2FDesktop%2FUntitled-1.html%230-sqq-1-12327-9737f6f9e09dfaf5d3fd14d775bfee85&title=&desc=&summary=&site=baidu" target="_blank"><img src="statics/img/fxtb(3).png" onmouseover="this.src='statics/img/fxtb3.png" onmouseout="this.src='statics/img/fxtb(3).png'" width="28" height="28"></a>
+<a href="http://www.baidu.com/home/page/show/url?url=file%3A%2F%2F%2FC%3A%2FUsers%2Fwangyi%2FDesktop%2FUntitled-1.html%230-bdhome-1-95802-1d18d5141e8cb800a4977d54d80686cb&name=&key=894f9-1427424357&apiType=&buttonType=&from=addtobaidu" target="_blank"><img src="statics/img/fxtb(4).png" onmouseover="this.src='statics/img/fxtb4.png'" onmouseout="this.src='statics/img/fxtb(4).png'" width="28" height="28"></a>
+<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=file%3A%2F%2F%2FC%3A%2FUsers%2Fwangyi%2FDesktop%2FUntitled-1.html%230-qzone-1-22625-d020d2d2a4e8d1a374a433f596ad1440&title=&desc=&summary=&site=" target="_blank"><img src="statics/img/fxtb(5).png" onmouseover="this.src='statics/img/fxtb5.png'" onmouseout="this.src='statics/img/fxtb(5).png'" width="28" height="28"></a>
+ </div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>    
+    <!--footer开始-->
+<div class="footer">
+<div class="ksdh">          
+<div id="div4" class="index_core" style="display:none;"> 
+</div>
+<div id="btmNavBtn"><img src="statics/img/ya_btm_arrow_down.png"></div>
+<div class="service">
+  <div class="index_bottom_public" style="display: none;">
+ 
+	 
+<div class="service_cp">
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=13"><strong>集团概况</strong></a></p>
+
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=13">领导致辞</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=58">集团简介</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=85">组织机构</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=10">区位优势</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=16">核心业务</a></p>
+ 
+</div>
+	 
+<div class="service_gl">
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=17"><strong>新闻中心</strong></a></p>
+
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=18">重要新闻</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=19">港区新闻</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=20">图片报道</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=21">视频新闻</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=22">投资伙伴</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=23">职工星座</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=24">专题活动</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=25">资讯参考</a></p>
+ 
+</div>
+	 
+<div class="service_gl">
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=27"><strong>港口文化</strong></a></p>
+
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=27">港口理念</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=28">战略&目标</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=29">港口标识</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=30">获得荣誉</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=31">品牌建设</a></p>
+ 
+</div>
+	 
+<div class="service_gl">
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=33"><strong>临港产业</strong></a></p>
+
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=33">临港产业</a></p>
+ 
+</div>
+	 
+<div class="service_gl">
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=34"><strong>视觉港湾</strong></a></p>
+
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=35">宣传片</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=36">MV类</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=37">港区风光图</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=38">历史长廊</a></p>
+ 
+</div>
+	 
+<div class="service_gl">
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=40"><strong>社会责任</strong></a></p>
+
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=40">社会公益</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=41">环保安全</a></p>
+ 
+</div>
+	 
+<div class="service_gl">
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=44"><strong>联系我们</strong></a></p>
+
+<p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=44">关于我们</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=45">联系方式</a></p>
+ <p><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=46">人才招聘</a></p>
+ 
+</div>
+  </div>
+</div>
+  </div>
+<div class="mnxfoot">
+	<div class="mnxfootn">
+   	  <div class="mnfootxz"><img src="statics/img/dlogo.png" width="243" /></div>
+      <div class="mnfootz"><a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=112">网站地图</a> |  <a href="http://www.yantaiport.com.cn/index.php?m=content&c=index&a=lists&catid=44">联系我们</a> |  鲁ICP备05025935号<br/>
+烟台港集团 版权所有   |  技术支持：烟台海港信息通信公司 
+<a href="http://www.w-e.cc/">网站建设</a>：<a href="http://www.w-e.cc/">烟台网亿网络公司</a></div><br/>
+
+<div class="mnfooty">
+	<div class="righta"><img src="statics/img/mnwx.jpg" width="59" height="58" /><br/>官方微信</div>
+    <div class="righta"><img src="statics/img/mnwb.jpg" width="56" height="56" /><br/>官方微博</div>
+</div>
+<div  style="width:300px;margin:0 auto; padding:20px 0;"> <img src="tb.png"> 
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37060202000287" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">鲁公网安备 37060202000287号</p></a>
+		 	</div>
+<div class="clear"></div>
+    </div>
+</div>    
+   
+    <!--footer结束-->
+ <style type="text/css">
+.back-top{
+	width: 20px;
+	height: 75px;
+	overflow: hidden;
+	position: fixed;
+	right: 1%;
+	bottom: 2%;
+	z-index: 20;
+	display: none;
+	background: url(statics/img/top.png) no-repeat;
+	cursor: pointer;
+}
+.back-top.hover{
+	background-position: 0 -75px;
+}
+</style>
+<script src="statics/js/16888/maintop.js" type="text/javascript" charset="utf-8"></script>
+<div class="back-top" ></div> 
+<script language="javascript">
+<!--
+if (top.location != location) top.location.href = location.href;
+//-->
+</script>
+<script type="text/javascript" src="statics/js/16888/comm.js"></script>
+ </div>
+</body>
+</html>

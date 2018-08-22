@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{$category.title}_{$title}7777777777777777</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link href="/Public/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/Public/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="/Public/static/bootstrap/css/docs.css" rel="stylesheet">
+<link href="/Public/static/bootstrap/css/onethink.css" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="/Public/static/bootstrap/js/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/Public/static/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="/Public/static/bootstrap/js/bootstrap.min.js"></script>
+<!--<![endif]-->
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">{$title}</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                        <li>
+                            <a href="/">首页</a>
+                        </li>
+					<volist name="catelist" id="vo">
+                        <li>
+                            <a href="/{$vo.name}">{$vo.title}</a>
+                        </li>
+					</volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="jumbotron subhead" id="overview">
+	<div class="container">
+		<h2>{$category.title}</h2>
+		<p class="lead"></p>
+	</div>
+</header>
+<div class="container">
+	<div class="crumbs">{$breadcrumbs}</div>
+    <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav">
+					<volist name="currentcate" id="vo">
+						<li <eq name='vo.id' value="$category['id']">class="active"</eq>><a href="{$vo.link}">{$vo.title}</a></li>
+					</volist>
+                </ul>
+            </div>
+			<div class="span9">
+				<section id="contents">
+					<volist name="list" id="data">
+						<div class="">
+							<h3 class="ellipsis"><a href="/article/detail/{$data['id']}.html  ">{$data.title}</a></h3>
+						</div>
+						<div>
+							<p class="lead">{$data.description}</p>
+						</div>
+						<div>
+							<span><a href="/article/detail/{$data['id']}.html">查看全文</a></span>
+							<span class="pull-right">
+								<span>发表于 {$data.create_time|date='Y-m-d',###}</span>
+							</span>
+						</div>
+						<hr/>
+					</volist>			
+					<div class="onethink pagination pagination-right pagination-large">
+						{$page}
+					</div>
+				</section>
+			</div>
+    </div>
+</div>
+</body>
+</html>

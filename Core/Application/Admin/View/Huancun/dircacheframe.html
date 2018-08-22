@@ -1,0 +1,8 @@
+<div class="controls replace_form">
+<volist name="data" id="vo" key="k">
+    <div class="_row">
+        <span>文件或目录{$k}：</span><input name="dirs[]" value="{:htmlspecialchars(base64_decode($vo['find']))}">
+        <span class="check-tips">缓存时间{$k}：</span><input name="cachetime[]" value="{:htmlspecialchars($vo['replace'])}">
+    </div>
+</volist>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/jaeger/curlmulti" />
+      <path value="$PROJECT_DIR$/vendor/jaeger/querylist-ext-aquery" />
+      <path value="$PROJECT_DIR$/vendor/jaeger/querylist-ext-multi" />
+      <path value="$PROJECT_DIR$/vendor/jaeger/http" />
+      <path value="$PROJECT_DIR$/vendor/jaeger/querylist" />
+      <path value="$PROJECT_DIR$/vendor/fluentdom/fluentdom" />
+      <path value="$PROJECT_DIR$/vendor/jaeger/phpquery-single" />
+      <path value="$PROJECT_DIR$/vendor/jaeger/querylist-ext-request" />
+      <path value="$PROJECT_DIR$/vendor/php-curl-class/php-curl-class" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+</project>

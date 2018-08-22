@@ -1,0 +1,16 @@
+<div class="controls replace_form">
+    <volist name="data" id="vo" key="k">
+        <div class="_row">
+            <span>目标代码{$k}：</span><textarea name="mbstr[]">{:htmlspecialchars(base64_decode($vo['find']))}</textarea>
+            <span class="check-tips">我的代码{$k}：</span><textarea name="mystr[]">{:htmlspecialchars(base64_decode($vo['replace']))}</textarea>
+        </div>
+    </volist>
+</div>
+<style>
+    .replace_form textarea{
+        width:30%;
+        height:3em;
+        resize:both;
+        overflow:auto;
+    }
+</style>
