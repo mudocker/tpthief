@@ -10,5 +10,9 @@
         "psr-4": {
            "Home\\": "Core/Application/Home/"
         }
+    },
+    "config": {
+        "preferred-install":"dist"
     }
+
 }
